@@ -1,0 +1,18 @@
+if [ -z "$SKIP_TYPECHECK" ]; then
+  SKIP_TYPECHECK=false
+fi
+
+if [ -z "$SKIP_PRETTY" ]; then
+  SKIP_PRETTY=false
+fi
+
+if [ -z "$SKIP_LINT" ]; then
+  SKIP_LINT=false
+fi
+
+SKIP_TYPECHECK=$SKIP_TYPECHECK \
+SKIP_PRETTY=$SKIP_PRETTY \
+SKIP_LINT=$SKIP_LINT \
+npm run prebuild
+
+npm run build

@@ -1,0 +1,46 @@
+{
+  "name": "eslint-demo-9.x",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "engines": {
+    "node": ">=20",
+    "npm": ">=9"
+  },
+  "scripts": {
+    "start": "node -r dotenv/config dist/index.js",
+    "dev": "nodemon",
+    "pretty": "prettier --check --write .",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "build": "tsx -r dotenv/config scripts/build.ts",
+    "prebuild": "./scripts/prebuild.sh",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "eslint",
+    "typescript",
+    "prettier",
+    "nodemon",
+    "husky"
+  ],
+  "author": "Alessandro Montanari <alessandro.montanari@polarity.dev>",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.10.10",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "globals": "^15.14.0",
+    "nodemon": "^3.1.9",
+    "prettier": "3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.21.0",
+    "husky": "^9.1.7"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
